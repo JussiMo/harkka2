@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Chuck from './components/Chuck.js';
 
@@ -7,6 +7,14 @@ const refreshPage = () => {
 };
 
 function App() {
+  useEffect(() => {
+    const interval = setInterval(refreshPage, 10000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div>
       <Chuck />
