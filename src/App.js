@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Chuck />
-      <button onClick={refreshPage}>New fact</button>
+      <button onClick={refreshPage}>New random fact</button>
     </div>
   );
 }
